@@ -1,0 +1,17 @@
+<launch>
+
+    <include file="$(find f1tenth_gym_ros)/launch/gym_bridge_host.launch" />
+
+    <node name="msde_driving" pkg="msde_fgm" type="fgm_node" output="screen">
+        <rosparam command="load" file="$(find msde_fgm)/config/sim_fgm_params.yaml" />
+    </node>
+
+    <node name="pure_pursuit" pkg="pure_pursuit" type="pure_pursuit_node" output="screen">
+        <rosparam command="load" file="$(find pure_pursuit)/config/pure_pursuit_param.yaml" />
+        <remap from="/vesc/high_level/ackermann_cmd_mux/input/nav_1" to="/opp_drive" />
+        <remap from="/pf/pose/odom" to="/opp_odom" />
+        <remap from="/scan" to="/opp_scan" />
+    </node>
+
+
+</launch>

@@ -1,0 +1,23 @@
+# reference points
+reference_point:
+  filepath_1: /wps/berlin_1.csv
+  filepath_2: /wps/berlin_5.csv
+  distance: 1.8
+
+# name of topic to subscribe and publish
+topic:
+  scan: /msde_race/scan
+  odom: /msde_race/odom
+  nav: /msde_race/drive
+
+
+# configuration values for driving algorithm
+driving:
+  speed_max: 7.0
+  speed_min: 2.1
+  robot_scale: 0.3
+  threshold: 2.0
+  gap_size: 1
+  filter_scale: 1.08
+  gap_theta_gain: 40.0
+  ref_theta_gain: 1.0

@@ -1,0 +1,7 @@
+<launch>
+
+    <node name="msde_driving" pkg="msde_fgm" type="fgm_node" output="screen">
+        <rosparam command="load" file="$(find msde_fgm)/config/sim_grand_prix_params.yaml" />
+    </node>
+
+</launch>
