@@ -1,6 +1,6 @@
 # reference points
 reference_point:
-  filepath_1: /wps/berlin_1.csv
+  filepath_1: /wps/berlin_5.csv
   filepath_2: /wps/berlin_5.csv
   distance: 1.8
 
@@ -13,7 +13,7 @@ topic:
 
 # configuration values for driving algorithm
 driving:
-  speed_max: 7.0
+  speed_max: 6.5
   speed_min: 2.1
   robot_scale: 0.3
   threshold: 2.0
